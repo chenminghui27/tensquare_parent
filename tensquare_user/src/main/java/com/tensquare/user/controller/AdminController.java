@@ -3,6 +3,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.netflix.discovery.converters.Auto;
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,7 +34,8 @@ public class AdminController {
 
 	@Autowired
 	private AdminService adminService;
-	
+	@Autowired
+	private HttpServletRequest request;
 	
 	/**
 	 * 查询全部数据

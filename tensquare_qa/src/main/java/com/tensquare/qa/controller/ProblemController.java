@@ -32,8 +32,14 @@ public class ProblemController {
 
 	@Autowired
 	private ProblemService problemService;
-	
-	
+
+	@Autowired
+	private LabelClient labelClient;
+
+	@Autowired
+	private HttpServletRequest request;
+
+
 	/**
 	 * 查询全部数据
 	 * @return
@@ -42,7 +48,7 @@ public class ProblemController {
 	public Result findAll(){
 		return new Result(true,StatusCode.OK,"查询成功",problemService.findAll());
 	}
-	
+
 	/**
 	 * 根据ID查询
 	 * @param id ID
@@ -66,7 +72,6 @@ public class ProblemController {
 		Page<Problem> pageList = problemService.findSearch(searchMap, page, size);
 		return  new Result(true,StatusCode.OK,"查询成功",  new PageResult<Problem>(pageList.getTotalElements(), pageList.getContent()) );
 	}
-
 	/**
      * 根据条件查询
      * @param searchMap
@@ -77,8 +82,6 @@ public class ProblemController {
         return new Result(true,StatusCode.OK,"查询成功",problemService.findSearch(searchMap));
     }
 
-    @Autowired
-    private HttpServletRequest request;
 
 	/**
 	 * 增加
@@ -95,7 +98,7 @@ public class ProblemController {
 		problemService.add(problem);
 		return new Result(true,StatusCode.OK,"增加成功");
 	}
-	
+
 	/**
 	 * 修改
 	 * @param problem
@@ -103,10 +106,10 @@ public class ProblemController {
 	@RequestMapping(value="/{id}",method= RequestMethod.PUT)
 	public Result update(@RequestBody Problem problem, @PathVariable String id ){
 		problem.setId(id);
-		problemService.update(problem);		
+		problemService.update(problem);
 		return new Result(true,StatusCode.OK,"修改成功");
 	}
-	
+
 	/**
 	 * 删除
 	 * @param id
@@ -159,9 +162,6 @@ public class ProblemController {
 		return new Result(true,StatusCode.OK,"查询成功",pageResult);
 	}
 
-
-	@Autowired
-	private LabelClient labelClient;
 
 	/**
 	 * 根据标签ID查询标签对象

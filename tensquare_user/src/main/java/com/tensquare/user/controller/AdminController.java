@@ -1,4 +1,5 @@
 package com.tensquare.user.controller;
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,21 @@ import entity.Result;
 import entity.StatusCode;
 import util.JwtUtil;
 
+=======
+import com.tensquare.user.pojo.Admin;
+import com.tensquare.user.service.AdminService;
+import entity.PageResult;
+import entity.Result;
+import entity.StatusCode;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.*;
+import util.JwtUtil;
+
+import java.util.HashMap;
+import java.util.Map;
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 /**
  * 控制器层
  * @author Administrator
@@ -32,7 +48,11 @@ public class AdminController {
 
 	@Autowired
 	private AdminService adminService;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	
 	/**
 	 * 查询全部数据

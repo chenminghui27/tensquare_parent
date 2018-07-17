@@ -20,9 +20,12 @@
         <module>tensquare_sms</module>
         <module>tensquare_eureka</module>
         <module>tensquare_friend</module>
+<<<<<<< HEAD
         <module>tensquare_manager</module>
         <module>tensquare_web</module>
         <module>tensquare_config</module>
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
     </modules>
 
 

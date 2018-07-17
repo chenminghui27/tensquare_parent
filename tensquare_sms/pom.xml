@@ -26,6 +26,7 @@
             <artifactId>aliyun-java-sdk-core</artifactId>
             <version>3.2.5</version>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
@@ -42,6 +43,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
     </dependencies>
 
 

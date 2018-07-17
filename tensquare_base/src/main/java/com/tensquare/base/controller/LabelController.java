@@ -7,12 +7,14 @@ import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+
+<<<<<<<HEAD
+        =======
+        >>>>>>>e20378517f0f9c4d51350be57406a2dbbb1cf89f
 
 /**
  * 标签控制器类
@@ -20,7 +22,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/label")
 @CrossOrigin
+<<<<<<< HEAD
 @RefreshScope
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 public class LabelController {
 
     @Autowired
@@ -109,6 +114,7 @@ public class LabelController {
         return new Result(true,StatusCode.OK,"删除成功");
     }
 
+<<<<<<< HEAD
     @Value("${sms.ip}")
     private String ip;
 
@@ -117,4 +123,6 @@ public class LabelController {
         return new Result(true,StatusCode.OK,ip);
     }
 
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 }

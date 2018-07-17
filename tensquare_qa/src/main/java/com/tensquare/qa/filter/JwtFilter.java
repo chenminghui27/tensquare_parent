@@ -24,7 +24,11 @@ public class JwtFilter extends HandlerInterceptorAdapter {
         //微服务鉴权
 
         String header = request.getHeader("Authorization");
+<<<<<<< HEAD
         System.out.println("header:"+header);
+=======
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
         if( header!=null ){
             if(header.startsWith("Bearer ")){
                 String token = header.substring(7);

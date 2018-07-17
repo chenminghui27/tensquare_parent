@@ -1,25 +1,17 @@
 package com.tensquare.qa.controller;
-import java.util.List;
-import java.util.Map;
-
 import com.tensquare.qa.client.LabelClient;
+import com.tensquare.qa.pojo.Problem;
+import com.tensquare.qa.service.ProblemService;
+import entity.PageResult;
+import entity.Result;
+import entity.StatusCode;
 import io.jsonwebtoken.Claims;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.tensquare.qa.pojo.Problem;
-import com.tensquare.qa.service.ProblemService;
-
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import java.util.Map;
 /**
  * 控制器层
  * @author Administrator
@@ -32,8 +24,19 @@ public class ProblemController {
 
 	@Autowired
 	private ProblemService problemService;
+<<<<<<< HEAD
 	
 	
+=======
+
+	@Autowired
+	private LabelClient labelClient;
+
+	@Autowired
+	private HttpServletRequest request;
+
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	/**
 	 * 查询全部数据
 	 * @return
@@ -42,7 +45,11 @@ public class ProblemController {
 	public Result findAll(){
 		return new Result(true,StatusCode.OK,"查询成功",problemService.findAll());
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	/**
 	 * 根据ID查询
 	 * @param id ID
@@ -66,7 +73,10 @@ public class ProblemController {
 		Page<Problem> pageList = problemService.findSearch(searchMap, page, size);
 		return  new Result(true,StatusCode.OK,"查询成功",  new PageResult<Problem>(pageList.getTotalElements(), pageList.getContent()) );
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	/**
      * 根据条件查询
      * @param searchMap
@@ -77,8 +87,11 @@ public class ProblemController {
         return new Result(true,StatusCode.OK,"查询成功",problemService.findSearch(searchMap));
     }
 
+<<<<<<< HEAD
     @Autowired
     private HttpServletRequest request;
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 
 	/**
 	 * 增加
@@ -95,7 +108,11 @@ public class ProblemController {
 		problemService.add(problem);
 		return new Result(true,StatusCode.OK,"增加成功");
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	/**
 	 * 修改
 	 * @param problem
@@ -103,10 +120,17 @@ public class ProblemController {
 	@RequestMapping(value="/{id}",method= RequestMethod.PUT)
 	public Result update(@RequestBody Problem problem, @PathVariable String id ){
 		problem.setId(id);
+<<<<<<< HEAD
 		problemService.update(problem);		
 		return new Result(true,StatusCode.OK,"修改成功");
 	}
 	
+=======
+		problemService.update(problem);
+		return new Result(true,StatusCode.OK,"修改成功");
+	}
+
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	/**
 	 * 删除
 	 * @param id
@@ -160,9 +184,12 @@ public class ProblemController {
 	}
 
 
+<<<<<<< HEAD
 	@Autowired
 	private LabelClient labelClient;
 
+=======
+>>>>>>> e20378517f0f9c4d51350be57406a2dbbb1cf89f
 	/**
 	 * 根据标签ID查询标签对象
 	 * @param labelid

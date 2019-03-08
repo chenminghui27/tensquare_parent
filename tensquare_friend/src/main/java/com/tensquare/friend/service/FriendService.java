@@ -46,6 +46,7 @@ public class FriendService {
         userClient.incFollowcount(userid,1);//增加关注数 11111 22222
         System.out.println("111");
         System.out.println("22222");
+        System.out.println("33333");
         return 1;
     }
 

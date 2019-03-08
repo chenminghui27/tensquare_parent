@@ -42,9 +42,10 @@ public class FriendService {
             friendDao.updateLike(userid,friendid,"1");
             friendDao.updateLike(friendid,userid,"1");
         }
-        userClient.incFanscount(friendid,1);//增加粉丝数 00000
+        userClient.incFanscount(friendid,1);//增加粉丝数
         userClient.incFollowcount(userid,1);//增加关注数 11111 22222
         System.out.println("111");
+        System.out.println("22222");
         return 1;
     }
 

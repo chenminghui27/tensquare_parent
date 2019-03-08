@@ -43,7 +43,7 @@ public class FriendService {
             friendDao.updateLike(friendid,userid,"1");
         }
         userClient.incFanscount(friendid,1);//增加粉丝数
-        userClient.incFollowcount(userid,1);//增加关注数
+        userClient.incFollowcount(userid,1);//增加关注数 11111
         return 1;
     }
 
